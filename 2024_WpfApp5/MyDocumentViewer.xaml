@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-        xmlns:local="clr-namespace:_2024_WpfApp5" d:DataContext="{d:DesignInstance Type=local:MyDocumentViewModel}"
+        xmlns:local="clr-namespace:_2024_WpfApp5"
         mc:Ignorable="d"
         Title="MyDocumentViewer" Height="450" Width="800">
 
