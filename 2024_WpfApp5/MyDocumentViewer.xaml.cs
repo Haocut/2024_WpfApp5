@@ -36,7 +36,7 @@ namespace _2024_WpfApp5
         private void OpenCommand_Executed(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Rich Text Format (*.rtf)|*.rtf|All files (*.*)|*.*";
+            openFileDialog.Filter = "Rich Text Format (*.rtf)|*.rtf|HTML Files (*.html;*.htm)|*.html;*.htm|All files (*.*)|*.*";
             openFileDialog.DefaultExt = ".rtf";
             openFileDialog.AddExtension = true;
 
@@ -53,7 +53,7 @@ namespace _2024_WpfApp5
         private void SaveCommand_Executed(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Rich Text Format (*.rtf)|*.rtf|All files (*.*)|*.*";
+            saveFileDialog.Filter = "Rich Text Format (*.rtf)|*.rtf|HTML Files (*.html;*.htm)|*.html;*.htm|All files (*.*)|*.*";
             saveFileDialog.DefaultExt = ".rtf";
             saveFileDialog.AddExtension = true;
 
