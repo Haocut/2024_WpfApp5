@@ -121,13 +121,17 @@ namespace _2024_WpfApp5
 
             var property_fontColor = rtbEditor.Selection.GetPropertyValue
                 (TextElement.ForegroundProperty);
-            fontColorPicker.SelectedColor = ((SolidColorBrush)property_fontColor).Color;
+            if (property_fontColor != DependencyProperty.UnsetValue)
+            {
+                fontColorPicker.SelectedColor = ((SolidColorBrush)property_fontColor).Color;
+            }
 
         }
 
         private void trashButton_Click(object sender, RoutedEventArgs e)
         {
             rtbEditor.Document.Blocks.Clear();
+            rtbEditor.Background.ClearValue();
         }
 
         private void backgroundColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
