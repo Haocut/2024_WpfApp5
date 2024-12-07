@@ -32,7 +32,7 @@
                     <Image Width="32" Height="32" Source="/trash.png"/>
                 </Button>
             </ToolBar>
-            <ToolBar x:Name="editingToolBar" Width="450">
+            <ToolBar x:Name="editingToolBar" Width="470">
                 <ToggleButton x:Name="boldButton" Command="EditingCommands.ToggleBold" Height="38" Width="38">
                     <Image Width="32" Height="32" Source="/bold.png"/>
                 </ToggleButton>
@@ -47,7 +47,10 @@
                 <ComboBox x:Name="fontFamilyComboBox" HorizontalAlignment="Left" 
                           VerticalAlignment="Center" Width="100" Height="32" Margin="10,0,0,0" SelectionChanged="fontFamilyComboBox_SelectionChanged"/>
                 <ComboBox x:Name="fontSizeComboBox" HorizontalAlignment="Left" 
-                          VerticalAlignment="Center" Width="50" Height="32" Margin="10,0,0,0" SelectionChanged="fontSizeComboBox_SelectionChanged"/>
+                          VerticalAlignment="Center" Width="40" Height="32" Margin="10,0,0,0" SelectionChanged="fontSizeComboBox_SelectionChanged"/>
+                <xctk:ColorPicker x:Name="backgroundColorPicker" Width="60" Height="32" 
+                          VerticalAlignment="Center" DisplayColorAndName="True" Margin="10,0,0,0" SelectedColorChanged="backgroundColorPicker_SelectedColorChanged"   />
+
             </ToolBar>
         </ToolBarTray>
         <RichTextBox x:Name="rtbEditor" Background="#FFFAF9EF" SelectionChanged="rtbEditor_SelectionChanged">

@@ -3,6 +3,9 @@ using System.IO;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Media;
+using System.Windows.Controls;
+
+
 
 namespace _2024_WpfApp5
 {
@@ -125,6 +128,16 @@ namespace _2024_WpfApp5
         private void trashButton_Click(object sender, RoutedEventArgs e)
         {
             rtbEditor.Document.Blocks.Clear();
+        }
+
+        private void backgroundColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            if (backgroundColorPicker.SelectedColor.HasValue)
+            {
+                Color backgroundColor = backgroundColorPicker.SelectedColor.Value;
+                SolidColorBrush backgroundBrush = new SolidColorBrush(backgroundColor);
+                rtbEditor.Background = backgroundBrush;
+            }
         }
     }
 }
